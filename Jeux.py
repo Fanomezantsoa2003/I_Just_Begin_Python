@@ -1,7 +1,8 @@
 import random
 import tkinter as tk
+import tkinter.messagebox as messagebox
 
-nbr_aleatoire = random.randint(1, 100)
+nbr_aleatoire = random.randint(1, 10)
 
 def rejouer():
     global nbr_aleatoire
@@ -16,11 +17,15 @@ def bouton_click():
     
     # Vérifier si le nombre est correct
     if nombre == nbr_aleatoire:
+        # Afficher un message de succès
+        messagebox.showinfo("Bravo", "Vous avez trouvé le nombre !")
         print("Bravo, vous avez trouvé le nombre !")
         bouton.config(state=tk.DISABLED)  # Désactiver le bouton
     elif nombre > nbr_aleatoire:
+        messagebox.showinfo("Erreur", "Le nombre est plus petit.")
         print("Le nombre est plus petit.")
     else: 
+        messagebox.showinfo("Erreur", "Le nombre est plus grand.")
         print("Le nombre est plus grand.")
 
 # Création de la fenêtre principale
