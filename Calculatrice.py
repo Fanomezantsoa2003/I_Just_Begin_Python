@@ -46,7 +46,7 @@ def formater_probleme(probleme):
         formated += probleme[i]
         if probleme[i] != ' ':
             # Si le caractère suivant existe et n'est pas >
-            if i + 1 < len(probleme) and probleme[i + 1] !>
+            if i + 1 < len(probleme) and probleme[i + 1]:
                 formated += ' '
         i += 1
     return formated
