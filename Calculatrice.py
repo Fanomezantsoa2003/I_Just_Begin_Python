@@ -39,7 +39,20 @@ def calculer_expression(probleme):
     
     return resultat
 
+def formater_probleme(probleme):
+    formated = ''
+    i = 0
+    while i < len(probleme):
+        formated += probleme[i]
+        if probleme[i] != ' ':
+            # Si le caractère suivant existe et n'est pas >
+            if i + 1 < len(probleme) and probleme[i + 1]:
+                formated += ' '
+        i += 1
+    return formated
+
 # Programme principal
 probleme = input("Entrer le problème: ")
-resultat = calculer_expression(probleme)
+probleme_formated = formater_probleme(probleme)
+resultat = calculer_expression(probleme_formated)
 print(f"Résultat: {resultat}")
