@@ -1,5 +1,5 @@
 print("Entrer un nombre :")
-nombre = input()  # on garde la saisie comme chaîne
+nombre = input()
 
 somme = 0
 for chiffre in nombre:
